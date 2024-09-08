@@ -1,5 +1,5 @@
 import pandas as pd
-from ansi import ANSI
+from src.ansi import ANSI
 from tqdm import tqdm
 
 # Standardize column names for the dataframe

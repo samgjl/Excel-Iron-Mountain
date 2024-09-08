@@ -1,5 +1,5 @@
-from dataframe_handler import concatenate_dfs
-from io_handler import *
+from src.dataframe_handler import concatenate_dfs
+from src.io_handler import *
 
 spreadsheets = {
     # Format:

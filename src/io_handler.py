@@ -2,8 +2,8 @@ import time
 import sqlite3
 import pandas as pd
 from numpy import nan
-from ansi import ANSI
-from dataframe_handler import standardize
+from src.ansi import ANSI
+from src.dataframe_handler import standardize
 
 def write_to_sqlite(df: pd.DataFrame, path: str) -> None:
     conn = sqlite3.connect(path)
