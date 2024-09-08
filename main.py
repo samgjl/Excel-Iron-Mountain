@@ -4,9 +4,8 @@ from io_handler import *
 spreadsheets = {
     # Format:
     # "<path to spreadsheet>"": ["<sheet name>", "<sheet name>", ...],
-    # Example:
+    # The following are examples:
     # "C:Documents/extra/THESES.xlsx": ["Sheet1", "Sheet2", "Sheet3", "Sheet4 - No barcodes"],
-
     "./extra/THESES in IM - Additional Theses Audit.xlsx": ["Sheet3"],
     "./extra/THESES IN IM - Last-First author order 22X2Z MYSTERY BOXES.xlsx": ["L4263713-file", "Additional theses audit"],
     "./extra/Theses in IM - no titles.xlsx": ["L2484789-file", "new barcodes"],
