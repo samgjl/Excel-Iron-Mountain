@@ -1,22 +1,3 @@
-<style>
-    .code {
-        border-radius: 5px;
-        background-color: #26a641;
-        color: white;
-        padding: 10px;       
-        border: none;
-    }
-    .code:hover {
-        color: white;
-        background-color: #52a869;
-        text-decoration: none;
-    }
-    .code:active {
-        background-color: #42c95f;
-
-    }
-</style>
-
 # Excel-Iron-Mountain
 Interface for the merging of spreadsheets for Caltech's Iron Mountain
 
