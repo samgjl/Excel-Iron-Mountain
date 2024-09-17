@@ -73,3 +73,21 @@ def merge_dupes(df: pd.DataFrame) -> pd.DataFrame:
         df = df.drop(barcode)
         df.loc[barcode] = merged
     return df
+
+
+def separate_by_year(df: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    df = df.copy()
+    df["YEAR"] = df["YEAR"].replace(pd.NA, -1) # Replace NaN with -1
+    df = df[df["YEAR"].apply(lambda x: (str(x).isnumeric() or type(x) == int))] # Remove non-numeric years
+    df["YEAR"] = df["YEAR"].astype(int) # Convert to int
+
+    years = df["YEAR"].unique()
+    years.sort()
+    ANSI.header(f"Separating by year: {years}")
+    results = {}
+    for year in years:
+        results[year] = df[df["YEAR"] == year]
+    results["None"] = results.pop(-1, pd.DataFrame()) # swap -1 for "None"
+
+    ANSI.success(f"    Complete.")
+    return results

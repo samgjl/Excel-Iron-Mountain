@@ -21,6 +21,8 @@ for path, subsheet in spreadsheets.items():
 
 dupe = concatenate_dfs(pages, dedupe=False)
 dedupe = concatenate_dfs(pages, dedupe=True)
+years = separate_by_year(dedupe)
 
 write_to_excel(dupe, duplicates_path)
 write_to_excel(dedupe, no_duplicates_path)
+write_years_as_pages_excel(years, "years.xlsx")
